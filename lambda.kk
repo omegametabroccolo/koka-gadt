@@ -1,9 +1,9 @@
 module lambda
 
 import std/core/undiv
-import teq
+pub import teq
 
-abstract div type term<t>
+pub div type term<t>
   Free<a>(v: int, ?teq: teq<t,a>)
   Lam<a,b>(f: term<a> -> term<b>, ?teq: teq<t,a -> b>)
   App<a,b>(t1: term<a -> b>, t2: term<a>, ?teq: teq<t,b>)

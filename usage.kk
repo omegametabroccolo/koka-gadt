@@ -1,8 +1,8 @@
 import lambda
 
-val id' = lam fn(x) x
-val const' = lam fn(x) lam fn(_) x
-val wrong/loop = app(lam fn(x) app(x,x), lam fn(x) app(x,x))
+val id' = Lam fn(x) x
+val const' = Lam fn(x) Lam fn(_) x
+val wrong/loop = App(Lam fn(x) App(x,x), Lam fn(x) App(x,x))
 
 fun main()
   val zero = lam fn(_) lam fn(x) x
